@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/andrejvuchkovikj/deep_snp_project/media/videos/animationLogic/480p15/partial_movie_files/MutationScanner/1584795214_1842140132_223132457.mp4'
+file 'file:/Users/andrejvuchkovikj/deep_snp_project/media/videos/animationLogic/480p15/partial_movie_files/MutationScanner/4072820271_600228756_1380249637.mp4'
+file 'file:/Users/andrejvuchkovikj/deep_snp_project/media/videos/animationLogic/480p15/partial_movie_files/MutationScanner/4072820271_4217992463_2661139057.mp4'
+file 'file:/Users/andrejvuchkovikj/deep_snp_project/media/videos/animationLogic/480p15/partial_movie_files/MutationScanner/4072820271_3750153216_2610727282.mp4'
+file 'file:/Users/andrejvuchkovikj/deep_snp_project/media/videos/animationLogic/480p15/partial_movie_files/MutationScanner/4072820271_4217992463_3248067640.mp4'
+file 'file:/Users/andrejvuchkovikj/deep_snp_project/media/videos/animationLogic/480p15/partial_movie_files/MutationScanner/4072820271_906417712_3863823522.mp4'
+file 'file:/Users/andrejvuchkovikj/deep_snp_project/media/videos/animationLogic/480p15/partial_movie_files/MutationScanner/4072820271_2844360058_69469969.mp4'
