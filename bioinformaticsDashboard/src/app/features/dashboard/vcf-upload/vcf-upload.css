@@ -1,0 +1,71 @@
+.upload-box {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border: 2px dashed #444;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #0070f3;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d3a 100%);
+}
+
+.icon-section {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.upload-box h3 {
+  color: #fff;
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.upload-box p {
+  color: #888;
+  margin: 0 0 24px 0;
+  font-size: 14px;
+}
+
+.drop-zone {
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ccc;
+}
+
+.drop-zone:hover {
+  background: #404040;
+  border-color: #0070f3;
+}
+
+.btn-scan {
+  background: #0070f3;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-scan:hover:not(:disabled) {
+  background: #0051a5;
+  transform: translateY(-2px);
+}
+
+.btn-scan:disabled {
+  background: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

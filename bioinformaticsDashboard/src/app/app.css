@@ -1,0 +1,23 @@
+.app-container {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+}
+
+main {
+  padding: 24px;
+  background-color: #0a0a0a;
+  min-height: 90vh;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* List is 350px, Viewer takes the rest */
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.visualizer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

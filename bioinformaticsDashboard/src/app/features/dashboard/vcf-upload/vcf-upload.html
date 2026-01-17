@@ -1,0 +1,16 @@
+<div class="upload-box">
+  <div class="icon-section">🧬</div>
+  <h3>Genomic Variant Scanner</h3>
+  <p>Drop your .VCF file here to begin XGBoost analysis</p>
+  
+  <input type="file" #fileInput (change)="onFileSelected($event)" hidden>
+  
+  <div class="drop-zone" (click)="fileInput.click()">
+    <span *ngIf="!selectedFile">Select VCF File</span>
+    <span *ngIf="selectedFile">📄 {{ selectedFile.name }}</span>
+  </div>
+
+  <button class="btn-scan" [disabled]="!selectedFile || loading" (click)="uploadFile()">
+    {{ loading ? 'Processing...' : 'Run Analysis' }}
+  </button>
+</div>

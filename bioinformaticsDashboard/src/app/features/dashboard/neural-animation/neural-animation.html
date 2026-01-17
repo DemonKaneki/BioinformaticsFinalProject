@@ -1,0 +1,34 @@
+<div class="neural-container" [class.active]="active">
+  <div class="animation-header">
+    <h4>Neural Network Prediction</h4>
+    <div class="status-badge" [class.processing]="active">
+      {{ active ? 'Processing...' : 'Idle' }}
+    </div>
+  </div>
+  
+  <div class="neural-visualization" *ngIf="active">
+    <div class="network-layer input-layer">
+      <div class="node" *ngFor="let node of inputNodes" 
+           [class.active]="active"></div>
+    </div>
+    
+    <div class="connections"></div>
+    
+    <div class="network-layer hidden-layer">
+      <div class="node" *ngFor="let node of hiddenNodes" 
+           [class.active]="active"></div>
+    </div>
+    
+    <div class="connections"></div>
+    
+    <div class="network-layer output-layer">
+      <div class="node pathogenic" [class.active]="active"></div>
+      <div class="node benign" [class.active]="active"></div>
+    </div>
+  </div>
+  
+  <div class="placeholder" *ngIf="!active">
+    <div class="icon">🧠</div>
+    <p>Select a mutation to see prediction</p>
+  </div>
+</div>

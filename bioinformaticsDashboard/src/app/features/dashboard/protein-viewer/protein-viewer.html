@@ -1,0 +1,12 @@
+<div class="viewer-card">
+  <div class="viewer-header">
+    <span>3D Molecular Structure</span>
+    <span class="pdb-tag" *ngIf="pdbId">PDB: {{ pdbId }}</span>
+  </div>
+  
+  <div #viewport class="ngl-viewport"></div>
+
+  <div class="no-data" *ngIf="!pdbId">
+    <p>Select a variant from the list to view its 3D position</p>
+  </div>
+</div>

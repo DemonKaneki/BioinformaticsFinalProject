@@ -1,0 +1,126 @@
+.neural-container {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.animation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.animation-header h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.status-badge {
+  background: #333;
+  color: #888;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.status-badge.processing {
+  background: #0070f3;
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.neural-visualization {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
+
+.network-layer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.node {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #333;
+  border: 2px solid #555;
+  transition: all 0.5s ease;
+}
+
+.node.active {
+  background: #0070f3;
+  border-color: #0070f3;
+  box-shadow: 0 0 10px rgba(0, 112, 243, 0.5);
+  animation: neuronPulse 1.5s infinite;
+}
+
+.node.pathogenic.active {
+  background: #ff4d4d;
+  border-color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}
+
+.node.benign.active {
+  background: #4caf50;
+  border-color: #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.connections {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #555 50%, transparent 100%);
+  margin: 0 20px;
+  position: relative;
+}
+
+.neural-container.active .connections {
+  background: linear-gradient(90deg, transparent 0%, #0070f3 50%, transparent 100%);
+  animation: connectionFlow 2s infinite;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #666;
+}
+
+.placeholder .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.placeholder p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes neuronPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes connectionFlow {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}

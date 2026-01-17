@@ -1,0 +1,20 @@
+<div class="list-container">
+  <div class="list-header">
+    <h4>Detected Mutations</h4>
+    <small>{{ mutations.length }} variants found</small>
+  </div>
+
+  <div class="scroll-area">
+    <div *ngFor="let m of mutations" 
+         class="mutation-item" 
+         (click)="onSelect(m)"
+         [class.selected]="m === selectedItem">
+      <div class="badge">{{ m.gene }}</div>
+      <div class="details">
+        <strong>{{ m.mutation }}</strong>
+        <p>Pathogenicity: {{ (m.probability * 100).toFixed(1) }}%</p>
+      </div>
+      <div class="indicator" [style.background]="m.probability > 0.7 ? '#ff4d4d' : '#ffcc00'"></div>
+    </div>
+  </div>
+</div>

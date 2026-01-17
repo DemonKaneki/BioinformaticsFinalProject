@@ -1,0 +1,25 @@
+<div class="app-container">
+  <app-header></app-header>
+
+  <main>
+    <app-vcf-upload (resultsFound)="onResults($event)"></app-vcf-upload>
+
+    <div class="dashboard-grid" *ngIf="scanResults.length > 0">
+      <app-mutation-list 
+        [mutations]="scanResults" 
+        (selected)="onMutationSelect($event)">
+      </app-mutation-list>
+
+      <div class="visualizer-section">
+        <app-protein-viewer 
+          [pdbId]="selectedPdbId" 
+          [mutationPosition]="selectedPosition">
+        </app-protein-viewer>
+        
+        <app-neural-animation 
+          [active]="!!selectedMutation">
+        </app-neural-animation>
+      </div>
+    </div>
+  </main>
+</div>
